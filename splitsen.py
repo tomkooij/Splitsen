@@ -4,9 +4,8 @@ score = 0
 
 while True:
 
-
-    som = random.randint(10, 20)
-    deel = random.randint(1, 10)
+    som = random.randint(1, 10)
+    deel = random.randint(1, som-1)
     if ((som-deel) > 10):
 #        print('Moeilijke som overgeslagen!')
         continue
@@ -14,8 +13,7 @@ while True:
     answer = str(som - deel)
 
 
-    q1 = "\nNienke: %d is %d + ...?" % (som, deel)
-    print(q1)
+    print("\nNienke: %d is %d + ...?" % (som, deel))
 
     userIn = input("--> ")
 
