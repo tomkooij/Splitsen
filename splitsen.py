@@ -14,22 +14,21 @@ while True:
     answer = str(som - deel)
 
 
-    q1 = "\nNienke, %d is %d + ...?" % (som, deel)
+    q1 = "\nNienke: %d is %d + ...?" % (som, deel)
     print(q1)
 
     userIn = input("--> ")
 
-    if userIn.isdigit() == False:
-        print("Tiep een getal!")  
+    while (userIn.isdigit()==False):
+        print("Tiep een getal!")
+        userIn = input("Probeer het nog een keer : ")
         
-
-        # Start again at the top of the loop.
-        continue
-    elif userIn == answer:
-        print ("SUPER NIENKE")
+    if userIn == answer:
+        print ("\n********* SUPER NIENKE *********** ")
         score+=1
     else:
-        print ("Jammer, Nienke.")
+        print ("\nJammer, Nienke.")
+        print ("Het goed antwoord was: %d is %d + %d" % (som, deel, som-deel))
     
     scoretekst = "Je score is %d" % (score)
     print (scoretekst)
